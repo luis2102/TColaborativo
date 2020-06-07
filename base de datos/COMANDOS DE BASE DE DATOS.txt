@@ -1,0 +1,96 @@
+/*CREACION DE TABLAS SIN LLAVE FORANEA*/
+
+/* CREACION DE LA TABLA TEST DE PERSONALIDAD  */
+
+CREATE TABLE TEST_PERSONALIDAD(
+id_Test_Personalidad int not null AUTO_INCREMENT, 
+pregunta1 varchar(250), pregunta2 varchar(250), 
+pregunta3 varchar(250), pregunta4 varchar(250), 
+pregunta5 varchar(250), pregunta6 varchar(250), 
+pregunta7 varchar(250), pregunta8 varchar(250), 
+pregunta9 varchar(250), pregunta10 varchar(250), 
+PRIMARY KEY(id_Test_Personalidad));
+
+/* CREACION DE LA TABLA TEST DE ACTITUDES */
+
+CREATE TABLE TEST_ACTITUDES(
+id_Test_Actitudes int not null AUTO_INCREMENT, 
+pregunta1 varchar(250), pregunta2 varchar(250), 
+pregunta3 varchar(250), pregunta4 varchar(250), 
+pregunta5 varchar(250), pregunta6 varchar(250), 
+pregunta7 varchar(250), pregunta8 varchar(250), 
+pregunta9 varchar(250), pregunta10 varchar(250), 
+PRIMARY KEY(id_Test_Actitudes));
+
+/* CREACION DE LA TABLA TEST DE RENDIMIENTO */
+
+CREATE TABLE TEST_RENDIMIENTO(
+id_Test_Rendimiento int not null AUTO_INCREMENT, 
+pregunta1 varchar(250), pregunta2 varchar(250), 
+pregunta3 varchar(250), pregunta4 varchar(250), 
+pregunta5 varchar(250), pregunta6 varchar(250), 
+pregunta7 varchar(250), pregunta8 varchar(250), 
+pregunta9 varchar(250), pregunta10 varchar(250), 
+PRIMARY KEY(id_Test_Rendimiento));
+
+/* CREACION DE LA TABLA SUGERENCIAS */
+
+CREATE TABLE SUGERENCIAS(id_Sugerencias int not null AUTO_INCREMENT,
+ Nombre varchar(250) not null, PRIMARY KEY(id_Sugerencias));
+
+/* CREACION DE LA TABLA ACTIVIDADES */
+
+CREATE TABLE ACTIVIDADES(id_Actividad int not null AUTO_INCREMENT,
+ Nombre varchar(250) not null, PRIMARY KEY(id_Actividad));
+
+/*CREACION DE LA TABLA EXPERIENCIA*/
+
+CREATE TABLE EXPERIENCIA(id_Experiencia int not null AUTO_INCREMENT,
+ Nombre varchar(250) not null, PRIMARY KEY(id_Experiencia));
+
+/* CREACION DE TABLA GRUPO TRABAJO*/
+
+CREATE TABLE GRUPO_TRABAJO(id_Grupo int not null AUTO_INCREMENT,
+ Nombre varchar(250) not null,numero_Integrantes int not null, PRIMARY KEY(id_Grupo));
+
+/* CREACION DE TABLAS CON LLAVE FORANEA */
+
+/* CREACION DE LA TABLA CLIENTE */
+
+CREATE TABLE CLIENTE(id_Cliente int not null AUTO_INCREMENT, PRIMARY KEY(id_Cliente),
+ Nombre varchar(50), Paterno varchar(50), Materno varchar(50), 
+Genero varchar(50), FechaNacimiento varchar(50), Email varchar(50), 
+Contrasena varchar(50),id_Test_Personalidad int not null,
+id_Test_Actitudes int not null,id_Experiencia int not null, 
+FOREIGN KEY(id_Test_Personalidad) REFERENCES test_personalidad 
+(id_Test_Personalidad), FOREIGN KEY (id_Test_Actitudes) REFERENCES 
+test_actitudes(id_Test_Actitudes), FOREIGN KEY (id_Experiencia) 
+REFERENCES experiencia (id_Experiencia));
+
+/* CREACION DE TABLA CLIENTE GRUPO */
+
+CREATE TABLE CLIENTE_GRUPO(id_Cliente int not null,id_Grupo int not null,
+ Rol_Equipo varchar(250) not null, 
+FOREIGN KEY (id_Cliente) REFERENCES cliente(id_Cliente), 
+FOREIGN KEY (id_Grupo) REFERENCES grupo_trabajo(id_Grupo));
+
+/* CREACION DE TABLA SUGERENCIAS_GRUPO */
+
+CREATE TABLE SUGERENCIAS_GRUPO(id_Grupo int not null,
+ id_Sugerencias int not null, 
+FOREIGN KEY (id_Sugerencias) REFERENCES SUGERENCIAS(id_Sugerencias), 
+FOREIGN KEY (id_Grupo) REFERENCES grupo_trabajo(id_Grupo));
+
+/* CREACION DE TABLA TEST_GRUPO */
+
+CREATE TABLE TEST_GRUPO(id_Grupo int not null,
+ id_Test_Rendimiento int not null, 
+FOREIGN KEY (id_Test_Rendimiento) REFERENCES TEST_RENDIMIENTO(id_Test_Rendimiento), 
+FOREIGN KEY (id_Grupo) REFERENCES grupo_trabajo(id_Grupo));
+
+/* CREACION DE TABLA ACTIVIDAD_GRUPO */
+
+CREATE TABLE ACTIVIDAD_GRUPO(id_Grupo int not null,
+ id_Actividad int not null, 
+FOREIGN KEY (id_Actividad) REFERENCES ACTIVIDADES(id_Actividad), 
+FOREIGN KEY (id_Grupo) REFERENCES grupo_trabajo(id_Grupo));

@@ -14,17 +14,17 @@
       -->
         <div class="container margin-left-nav">
           <div class="row">
-            <div class="col-md-3 col-sm-2">
+            <div class="col-md-3 col-sm-2 col-xs-2">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#navbar-1">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">Nombre del usuario</a>
+                <a href="#" class="navbar-brand">Nombre_del_usuario</a>
               </div>
             </div>
-            <div class="col-md-9 col-sn-10"></div>
+            <div class="col-md-9 col-sn-10 col-xs-10"></div>
           </div>
         </div>
       </nav>
@@ -32,14 +32,14 @@
 
     <section class="container-full">
       <div class="row" id="full-page">
-        <div class="col-md-3 col-sm-2">
+        <div class="col-md-2 col-sm-5 col-xs-5">
           <div class="profile-sidebar">
             <div class="profile-userpic">
             </div>
             <nav class="profile-menu">
-              <ul class="nav navbar vertical navbar-inverse">
-                <li>
-                  <a href="#"><img class="imagen-icono" src="../img/icon/home_white.png" alt="Inicio"> Inicio</a>
+              <ul class="nav  navbar vertical navbar-inverse">
+                <li class="active">
+                  <a href="inicio.html"><img class="imagen-icono" src="../img/icon/home_white.png" alt="Inicio"> Inicio</a>
                 </li>
                 <li>
                   <a href="#"><img class="imagen-icono" src="../img/icon/user_white.png" alt="Perfil"> Perfil</a>
@@ -57,11 +57,60 @@
             </nav>
           </div>
         </div>
-
-        <div class="col-md-9 col-sm-2">
+        <div class="col-md-10 col-sm-7 col-xs-7">
           <!--aqui va el contenido-->
+          <br>
+          <div class="row">
+            <article class="activa col-md-12">
+              <h3><img class="imagen-icono" src="../img/icon/envelope_black.png" alt="Solicitudes">
+                Solicitud Confirmada <span class="label label-primary">Nueva notificación</span>
+              </h3>
+              <big><p>
+                El usuario <b>ejemplo@email.com</b> ha confirmado su solicitud para unirse al grupo <b>Nombre_del_grupo</b>.
+              </p></big>
+              <small><p>Fecha: --/--/----</p></small>
+            </article>
+          </div>
+          <br>
+          <div class="row">
+            <article class="negativa col-md-12">
+              <h3><img class="imagen-icono" src="../img/icon/envelope_white.png" alt="Solicitudes">
+                Solicitud rechazada <span class="label label-primary">Nueva notificación</span>
+              </h3>
+              <big><p>
+                El usuario <b>ejemplo@email.com</b> ha rechazado su solicitud para unirse al grupo <b>Nombre_del_grupo</b>.
+              </p></big>
+              <small><p>Fecha: --/--/----</p></small>
+            </article>
+          </div>
+          <br>
+          <div class="row">
+            <article class="neutral col-md-12">
+              <h3><img class="imagen-icono" src="../img/icon/report_black.png" alt="Solicitudes">
+                Nueva actividad agregada <span class="label label-primary">Nueva notificación</span>
+              </h3>
+              <big><p>
+                Se ha agregado una nueva actividad a la agenda de trabajo del grupo <b>Nombre_del_grupo</b>; para más
+                información revisar la agenda de trabajo del grupo <b>Nombre_del_grupo</b>.
+              </p></big>
+              <small><p>Fecha: --/--/----</p></small>
+            </article>
+          </div>
+          <br>
+          <div class="row">
+            <article class="neutral col-md-12">
+              <h3><img class="imagen-icono" src="../img/icon/report_black.png" alt="Solicitudes">
+                Nueva actividad asignada
+              </h3>
+              <big><p>
+                Se le ha asignado trabajar en la tarea <b>Nombre_de_la_tarea</b>; para más información revisar la
+                agenda de trabajo del grupo <b>Nombre_del_grupo</b>.
+              </p></big>
+              <small><p>Fecha: --/--/----</p></small>
+            </article>
+          </div>
+          <br>
         </div>
-
       </div>
     </section>
     <script src="../js/bootstrap.min.js"></script>

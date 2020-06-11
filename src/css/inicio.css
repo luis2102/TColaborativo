@@ -141,3 +141,16 @@ ul.vertical li:first-child {
   height: 15px;
   float: none;
 }
+/*apariencia de contenedores*/
+.activa{
+  background: #E0E0E0;
+  color:#212121;
+}
+.neutral{
+  background: #9E9E9E;
+  color:#212121;
+}
+.negativa{
+  background: #616161;
+  color:#FFFFFF;
+}

@@ -36,14 +36,98 @@
       </nav>
     </div>
     <div class="container">
-      <center><h1>Bienvenido</h1></center>
-      <div class="">
-        <p>Antes de comenzar, debe terminar su registro, por lo que debe de llenar el siguiente formulario</p>
+      <div class="row">
+        <center><h1>Bienvenido</h1></center>
+        <div class="col-sx-1 col-md-4"></div>
+        <div class="col-sx-10 col-md-4">
+            <p>Antes de comenzar, debe terminar su registro, por lo que debe de llenar el siguiente formulario.</p>
+        </div>
+        <div class="col-sx-1 col-md-4"></div>
       </div>
-      <div class="activa">
-        <form class="" action="index.html" method="post">
-
-        </form>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sx-1 col-md-2"></div>
+        <div class="col-sx-10 col-md-8">
+          <div class="container-fluid">
+            <form class="form-inline" action="index.html" method="post">
+              <div class="activa container-fluid">
+                <fieldset>
+                  <br>
+                  <div class="form-group">
+                    <label for="">Cuenta con una licenciatura o esta cursando alguna:</label><br>
+                    <input class="form-control form-control-sm" type="radio" name="Sexo" value="F">
+                    Cuent con una licenciatura<br>
+                    <input class="form-control form-control-sm" type="radio" name="Sexo" value="M">
+                    Curso una licenciatura<br>
+                    <input class="form-control form-control-sm" type="radio" name="Sexo" value="F">
+                    Cuento con una licenciatura trunca<br>
+                    <input class="form-control form-control-sm" type="radio" name="Sexo" value="M">
+                    Ninguna de las anteriores<br>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <label for="">Si su respuesta anterior no fue "ninguna de las anteriores":</label>
+                    <br>Area:
+                    <select class="form-control form-control-sm" name="area">
+                      <option value="">-</option>
+                      <option value="">opcion 2</option>
+                      <option value="">opcion 3</option>
+                    </select>
+                    Carrera:
+                    <select class="form-control form-control-sm" name="area">
+                      <option value="">-</option>
+                      <option value="">opcion 2</option>
+                      <option value="">opcion 3</option>
+                    </select>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <label for="">Cuenta con alguna acreditación:</label><br>
+                    <input class="form-control form-control-sm" type="radio" name="Sexo" value="F">
+                    Si<br>
+                    <input class="form-control form-control-sm" type="radio" name="Sexo" value="M">
+                    No<br>
+                  </div>
+                  <br>
+                  <label for="">Si cuenta con alguna acreditación, especificar el nombre y el tipo:</label>
+                  <div class="form-group">
+                    Nombre:
+                    <input class="form-control form-control-sm" placeholder="Nombre:" type="text" name="" value="">
+                    Tipo:
+                    <select class="form-control form-control-sm" name="area">
+                      <option value="">-</option>
+                      <option value="">opcion 2</option>
+                      <option value="">opcion 3</option>
+                    </select>
+                    <input class="form-control btn btn-basic" type="button" name="" value="+"> Agregar otra
+                    <br>
+                  </div>
+                  <div class="form-group inactivo">
+                    Nombre:
+                    <input class="form-control form-control-sm" placeholder="Nombre:" type="text" name="" value="" disabled>
+                    Tipo:
+                    <select class="form-control form-control-sm" name="area" disabled>
+                      <option value="">-</option>
+                      <option value="">opcion 2</option>
+                      <option value="">opcion 3</option>
+                    </select>
+                    <input class="form-control btn btn-basic" type="button" name="" value="X" disabled>Quitar
+                    <br>
+                  </div>
+                  <br>
+                </fieldset>
+              </div>
+              <br>
+              <div align="center">
+                <button type="submit" class="btn btn-primary" name="button">Aceptar</button>
+                <button type="button" class="btn btn-warning" name="button">Reiniciar</button>
+              </div>
+              <br>
+            </form>
+          </div>
+        </div>
+        <div class="col-sx-1 col-md-2"></div>
       </div>
     </div>
     <script src="../js/bootstrap.min.js"></script>

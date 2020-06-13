@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/inicio.css" type="text/css"/>
+    <link rel="shortcut icon" href="../img/icon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../img/icon/apple-touch-icon.png">
+    <title>Grupo "Nombre del grupo"</title>
+  </head>
+  <body>
+    <div class="container-full">
+      <nav class="navbar navbar-inverse navbar-static-top">
+      <!--
+      <nav class="navbar navbar-default navbar-static-top">
+      -->
+        <div class="container margin-left-nav">
+          <div class="row">
+            <div class="col-md-3 col-sm-2 col-xs-2">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#navbar-1">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Nombre_del_usuario</a>
+              </div>
+            </div>
+            <div class="col-md-9 col-sn-10 col-xs-10"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="container-full">
+      <div class="row" id="full-page">
+        <div class="col-md-2 col-sm-5 col-xs-5">
+          <div class="profile-sidebar">
+            <div class="profile-userpic">
+            </div>
+            <nav class="profile-menu">
+              <ul class="nav  navbar vertical navbar-inverse">
+                <li>
+                  <a href="inicio.html"><img class="imagen-icono" src="../img/icon/home_white.png" alt="Inicio"> Inicio</a>
+                </li>
+                <li>
+                  <a href="perfil.html"><img class="imagen-icono" src="../img/icon/user_white.png" alt="Perfil"> Perfil</a>
+                </li>
+                <li class="active">
+                  <a href="#"><img class="imagen-icono" src="../img/icon/duplicate_white.png" alt="Grupos de trabajo"> Grupos de trabajo</a>
+                </li>
+                <li><a href="#">Crear nuevo grupo</a></li>
+                <li><a href="#">Unirse a un grupo</a></li>
+                <li>
+                  <a href="solicitudes.html"><img class="imagen-icono" src="../img/icon/envelope_white.png" alt="Solicitudes"> Solicitudes</a>
+                </li>
+                <li>
+                  <a href="#"><img class="imagen-icono" src="../img/icon/exit_white.png" alt="Grupos de trabajo"> Cerrar sesión</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-10 col-sm-7 col-xs-7">
+          <!--aqui va el contenido-->
+          <br>
+          <div class="row">
+            <article class="col-md-12 col-sm-12 col-xs-12">
+              <h1>
+                Modificar grupo
+              </h1>
+            </article>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+              <br>
+              <div class="container-fluid">
+                <form class="form-inline" action="index.html" method="post">
+                  <fieldset class="activa"><br>
+                    <div class="container-fluid">
+                      <legend>Información del grupo</legend>
+                      <div class="form-group">
+                        <label for="">Nombre del grupo:</label>
+                        <input class="form-control form-control-sm" placeholder="Nombre del grupo:" type="text" name="" value="">
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="">Descripción:</label><br>
+                        <textarea class="form-control form-control-sm" placeholder="Descripción..." name="name" rows="5" cols="50"></textarea>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="">Usuarios que se añadirán:</label>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        Correo:
+                        <input class="form-control form-control-sm" placeholder="ejemplo@email.com" type="text" name="" value="">
+                        <button class="btn btn-default" type="button" name="button"><b>+ Agregar otro</b></button>
+                      </div>
+                      <div class="form-group inactivo">
+                        Correo:
+                        <input class="form-control form-control-sm" placeholder="ejemplo@email.com" type="text" name="" value="" disabled>
+                        <button class="btn btn-default" type="button" name="button" disabled><b>X Quitar</b></button>
+                      </div>
+                    </div><br>
+                  </fieldset>
+                  <br>
+                  <div align="center">
+                    <button type="submit" class="btn btn-primary" name="button">Aceptar</button>
+                    <button type="button" class="btn btn-danger" name="button">Cancelar</button>
+                  </div>
+                </form>
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

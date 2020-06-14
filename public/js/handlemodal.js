@@ -9,6 +9,7 @@ const $modalRegister= document.getElementById('modal_register')
 function toggleLogin() {
   $overlay.classList.toggle('active')
   $modalLogin.classList.toggle('active')
+  console.log('paso algo')
 }
 
 function toggleRegister() {
